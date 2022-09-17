@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
+
+import { CartContext } from '../../Context';
 
 import './Score.css';
 
 const Score = () => {
+  const {score, bestScore} = useContext(CartContext);
+
   return (
     <div>
-      <p>Score: 0</p>
-      <p>Best Score: 0</p>
+      <p>Score: {score}</p>
+      <p>Best Score: {bestScore}</p>
     </div>
   )
 }
